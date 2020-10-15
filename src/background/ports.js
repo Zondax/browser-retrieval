@@ -1,6 +1,6 @@
 /* global chrome */
 
-import channels from 'src/shared/channels';
+import channels from '../shared/channels';
 
 const debug = process.env.DEBUG === 'true';
 const portsByChannel = {};

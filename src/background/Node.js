@@ -8,10 +8,10 @@ import Mplex from 'libp2p-mplex';
 import { NOISE } from 'libp2p-noise';
 import Secio from 'libp2p-secio';
 import Gossipsub from 'libp2p-gossipsub';
-import topics from 'src/shared/topics';
-import messageTypes from 'src/shared/messageTypes';
-import getOptions from 'src/shared/getOptions';
-import setOptions from 'src/shared/setOptions';
+import topics from '../shared/topics';
+import messageTypes from '../shared/messageTypes';
+import getOptions from '../shared/getOptions';
+import setOptions from '../shared/setOptions';
 import ports from './ports';
 import Lotus from './lotus-client/Lotus';
 import Datastore from './Datastore';
@@ -151,7 +151,7 @@ class Node {
 
   async handleQueryResponse({ messageType, cid, multiaddrs, params }) {
     const options = await getOptions()
-    const offers = options.offerInfo?.offers || []
+    const offers = options.offerInfo ? options.offerInfo.offers : [];
 
     ports.postLog(`DEBUG: Handle query response`);
 

@@ -1,7 +1,7 @@
 import dagCBOR from 'ipld-dag-cbor';
 import * as signer from '@zondax/filecoin-signing-tools';
-import onOptionsChanged from 'src/shared/onOptionsChanged';
-import getOptions from 'src/shared/getOptions';
+import onOptionsChanged from '../../shared/onOptionsChanged';
+import getOptions from '../../shared/getOptions';
 import ports from '../ports';
 import methods from './methods';
 import codes from './codes';

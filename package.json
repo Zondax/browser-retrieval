@@ -4,7 +4,7 @@
   "description": "A p2p network of Filecoin content retrievers",
   "private": true,
   "dependencies": {
-    "@babel/cli": "^7.10.4",
+    "@babel/cli": "^7.11.6",
     "@babel/plugin-transform-runtime": "^7.10.4",
     "@babel/runtime": "^7.10.4",
     "@zondax/filecoin-signing-tools": "^0.11.0",
@@ -55,7 +55,14 @@
     "build:background": "NODE_ENV=development webpack",
     "build": "yarn build:popup && yarn build:background",
     "build:debug": "DEBUG=true yarn build",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "test": "ava"
+  },
+  "ava": {
+    "verbose": true,
+    "require": [
+      "esm"
+    ]
   },
   "watch": {
     "build:popup:js": "src/{popup,shared}/**/*.js",
@@ -75,5 +82,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "ava": "^3.13.0",
+    "esm": "^3.2.25"
   }
 }

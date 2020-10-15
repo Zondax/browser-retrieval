@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: 
+          name: Yarn dependencies
+          command: yarn install
+      - run:
+          name: Ava tests
+          command: yarn test

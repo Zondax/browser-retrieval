@@ -1,11 +1,11 @@
 import pipe from 'it-pipe';
 import pushable from 'it-pushable';
-import onOptionsChanged from 'src/shared/onOptionsChanged';
-import protocols from 'src/shared/protocols';
-import dealStatuses from 'src/shared/dealStatuses';
-import getOptions from 'src/shared/getOptions';
-import jsonStream from 'src/shared/jsonStream';
-import ports from 'src/background/ports';
+import onOptionsChanged from '../../shared/onOptionsChanged';
+import protocols from '../../shared/protocols';
+import dealStatuses from '../../shared/dealStatuses';
+import getOptions from '../../shared/getOptions';
+import jsonStream from '../../shared/jsonStream';
+import ports from '../../background/ports';
 
 class Provider {
   static async create(...args) {

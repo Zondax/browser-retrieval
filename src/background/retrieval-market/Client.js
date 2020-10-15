@@ -1,9 +1,9 @@
 import pipe from 'it-pipe';
 import pushable from 'it-pushable';
-import protocols from 'src/shared/protocols';
-import dealStatuses from 'src/shared/dealStatuses';
-import jsonStream from 'src/shared/jsonStream';
-import ports from 'src/background/ports';
+import protocols from '../../shared/protocols';
+import dealStatuses from '../../shared/dealStatuses';
+import jsonStream from '../../shared/jsonStream';
+import ports from '../ports';
 
 class Client {
   static async create(...args) {
