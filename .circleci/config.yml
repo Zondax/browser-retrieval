@@ -12,3 +12,16 @@ jobs:
       - run:
           name: Ava tests
           command: yarn test
+
+no-tags: &no-tags
+  filters:
+    tags:
+      ignore: /.*/
+
+workflows:
+  version: 2
+
+  default:
+    jobs:
+      - test:
+          <<: *no-tags
